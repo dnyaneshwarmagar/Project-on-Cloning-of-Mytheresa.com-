@@ -12,11 +12,11 @@ const signupController = require('./controller/signup.controller');
 
 app.use(express.json());
 app.use(express.static('public'));
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 7500;
 
-app.use('/home',homeController);
+app.use('/home', homeController);
 app.use('/products', productController);
 app.use("/cart", cartController);
 app.use("/payment", paymentController);
@@ -44,11 +44,11 @@ app.get("/netbanking", function (req, res) {
 const { google } = require("googleapis");
 
 const CLIENT_ID =
-  "388158439783-5jgictu6ekt7iotstsp68cartt0mjuf8.apps.googleusercontent.com";
+  "388158439783-5jgictu6ekt7iotstsp68cartt0muf8.apps.googleusercontent.com";
 const CLEINT_SECRET = "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";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//045tjWzHXVTduCgYIARAAGAQSNwF-L9IrSrIGfJSN88Ngz3JxblIfR4C_oYli6uMG12ZoqEKPJ5dZchCJROMbgXoSrG70spS5xrs";
+  "1//045tjWzHXVTduCgYIARAAGAQSNwF-L9IrSrIGfJSN88Ngz3JxblIfR4C_oYli6uMG12ZoqEKPJ5dZchCJROMbgXoSrG70spS5xs";
 
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
@@ -68,7 +68,7 @@ console.log(otp2);
 app.post("/send", function (req, res) {
 
   // console.log("body", req.body)
-  email = "sjtaherahmed@gmail.com";
+  email = "dnyanesh@gmail.com";
   // email = req.body.email;
   console.log("input Email: ", email);
 
@@ -80,7 +80,7 @@ app.post("/send", function (req, res) {
         service: "gmail",
         auth: {
           type: "OAuth2",
-          user: "praj4936@gmail.com", //check
+          user: "dnyanesh@gmail.com", //check
           clientId: CLIENT_ID,
           clientSecret: CLEINT_SECRET,
           refreshToken: REFRESH_TOKEN,
@@ -89,9 +89,9 @@ app.post("/send", function (req, res) {
       });
       // send mail with defined transport object
       var mailOptions = {
-        from: "Groww-Team <praj4936@gmail.com>",
+        from: "Mytheresa-Team <dnyanesh@gmail.com",
         to: `${email}`,
-        subject: "Groww Payment: ",
+        subject: "Myttheresa Payment: ",
         html:
           "<h3>OTP for Payment Confirmation is </h3>" +
           "<h1 style='font-weight:bold;'>" +
@@ -116,7 +116,7 @@ app.post("/send", function (req, res) {
 
 app.post("/verify", function (req, res) {
   console.log("otp - ", req.body.otp)
-  if (req.body.otp == otp || req.body.otp == otp2 ) {
+  if (req.body.otp == otp || req.body.otp == otp2) {
     // res.send("Yay! Order Successfully Placed");
     res.render("OTP/confirmation", { msg: "Yay! Order Successfully Placed" });
   } else {
@@ -137,7 +137,7 @@ app.post("/resend", function (req, res) {
         service: "gmail",
         auth: {
           type: "OAuth2",
-          user: "praj4936@gmail.com",
+          user: "dnyanesh@gmail.com",
           clientId: CLIENT_ID,
           clientSecret: CLEINT_SECRET,
           refreshToken: REFRESH_TOKEN,
@@ -146,7 +146,7 @@ app.post("/resend", function (req, res) {
       });
 
       var mailOptions = {
-        from: "Groww-Team <praj4936@gmail.com>",
+        from: "Mytheresa-Team <dnyanesh@gmail.com.com>",
         to: `${email}`,
         subject: "Groww Payment: ",
         html:
@@ -169,7 +169,7 @@ app.post("/resend", function (req, res) {
     .catch((error) => console.log(error.message));
 });
 
-app.listen(port , async () => {
-    await connect();
+app.listen(port, async () => {
+  await connect();
   console.log("We are listening 7500");
 })

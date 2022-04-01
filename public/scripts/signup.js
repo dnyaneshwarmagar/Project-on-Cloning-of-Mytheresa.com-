@@ -1,5 +1,5 @@
 
-function setFormMessage(formElement, type, message){
+function setFormMessage(formElement, type, message) {
 
     var messageElement = formElement.querySelector(".form__message");
 
@@ -10,10 +10,10 @@ function setFormMessage(formElement, type, message){
 
 
 
-function signUp(e){
+function signUp(e) {
 
     e.preventDefault()
-    
+
 
     let signup_form = document.getElementById("signup");
 
@@ -23,40 +23,40 @@ function signUp(e){
     let password = signup_form.password.value;
     let mobileNumber = signup_form.mobileNumber.value;
 
-    if(localStorage.getItem('users') === null){
+    if (localStorage.getItem('users') === null) {
         localStorage.setItem('users', JSON.stringify([]))
     }
 
+    window.location.href = "http://localhost:7500/home"
 
+    // let user = {
+    //     firstName,
+    //     lastName,
+    //     email,
+    //     password,
+    //     mobileNumber
+    // }
 
-    let user = {
-        firstName,
-        lastName,
-        email,
-        password,
-        mobileNumber
-    }
+    // if(user.mobileNumber.length === 10){
+    //     let arr = JSON.parse(localStorage.getItem('users'))
+    //     let exist = arr.length && JSON.parse(localStorage.getItem("users")).some(user => user.email === email || user.mobileNumber === mobileNumber);
 
-    if(user.mobileNumber.length === 10){
-        let arr = JSON.parse(localStorage.getItem('users'))
-        let exist = arr.length && JSON.parse(localStorage.getItem("users")).some(user => user.email === email || user.mobileNumber === mobileNumber);
-        
-        if(!exist){
-            arr.push(user)
-            localStorage.setItem('users', JSON.stringify(arr));
-            window.location.href = ".http://localhost:7500/login"
-            
-        }else{
-                signup_form.addEventListener("submit", e => {
-                    setFormMessage(signup_form, 'error', "User alerady exist...! Please Login")
-                    signup_form.classList.remove("form__message--error")
-                })
-            }
-            
-    }else{
-        signup_form.addEventListener("submit", e => {
-            setFormMessage(signup_form, 'error', "Please enter 10 Digit Mobile Number")
-            signup_form.classList.remove("form__message--error")
-        })
-    }
+    //     if(!exist){
+    //         arr.push(user)
+    //         localStorage.setItem('users', JSON.stringify(arr));
+    //         window.location.href = ".http://localhost:7500/login"
+
+    //     }else{
+    //             signup_form.addEventListener("submit", e => {
+    //                 setFormMessage(signup_form, 'error', "User alerady exist...! Please Login")
+    //                 signup_form.classList.remove("form__message--error")
+    //             })
+    //         }
+
+    // }else{
+    //     signup_form.addEventListener("submit", e => {
+    //         setFormMessage(signup_form, 'error', "Please enter 10 Digit Mobile Number")
+    //         signup_form.classList.remove("form__message--error")
+    //     })
+    // }
 }
