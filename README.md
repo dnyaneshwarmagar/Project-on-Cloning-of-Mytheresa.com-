@@ -53,8 +53,8 @@ To run, follow these steps:
 
 ### Video Presentation
 
-![](https://drive.google.com/file/d/1kPrXo0_px5PjDEI2WY1siqpPodOPsfIo/view?usp=sharing)
+-[](https://drive.google.com/file/d/1kPrXo0_px5PjDEI2WY1siqpPodOPsfIo/view?usp=sharing)
 
 ### Medium Blog
 
-![](https://medium.com/@dnyaneshwarmagar276/cloning-e-commerce-website-mytheresa-com-building-backend-and-frontend-a260616496c0)
+-[](https://medium.com/@dnyaneshwarmagar276/cloning-e-commerce-website-mytheresa-com-building-backend-and-frontend-a260616496c0)
