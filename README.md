@@ -9,6 +9,16 @@ Mytheresa is an e-commerce website for fashion and design products of all the le
 </tr>
 </table>
 
+## Built with
+
+- HTML
+- CSS
+- Advance JavaScript (ES6)
+- node js
+- Express js
+- MongoDb
+- npm Packages
+
 ## MYTHERESA Clone
 
 ### Sign up Page
@@ -37,23 +47,13 @@ To run, follow these steps:
 - Run port 2500 on the browser `http://localhost:7500/home`
 - Then you can Navigate through other pages from Home page
 
-## Built with
-
-- HTML
-- CSS
-- Advance JavaScript (ES6)
-- node js
-- Express js
-- MongoDb
-- npm Packages
-
 ## Creators
 
 - [@Dnyaneshwar Magar](https://github.com/dnyaneshwarmagar)
 
 ### Video Presentation
 
--https://drive.google.com/file/d/1kPrXo0_px5PjDEI2WY1siqpPodOPsfIo/view?usp=sharing
+-https://drive.google.com/file/d/15FgtiGHs2cQ1tFUHtl47XOR8_v970TMe/view?usp=sharing
 
 ### Medium Blog
 
