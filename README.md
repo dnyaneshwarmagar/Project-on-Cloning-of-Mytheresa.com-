@@ -44,7 +44,7 @@ To run, follow these steps:
 - Clone my repository `https://github.com/dnyaneshwarmagar/Project-on-Cloning-of-Mytheresa.com-.git`
 - Open the code in your VS code
 - Initialize the server `npm run server` on terminal
-- Run port 2500 on the browser `http://localhost:7500/home`
+- Run port 7500 on the browser `http://localhost:7500/home`
 - Then you can Navigate through other pages from Home page
 
 ## Creators
